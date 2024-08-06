@@ -39,22 +39,23 @@ async function BlogDetail({ params }: { params: { id: string } }) {
   );
 
   return (
-    <div className="flex flex-wrap justify-evenly">
-      <div>
-        <div className="flex max-lg:flex-wrap gap-x-10 justify-between">
+    <div className="flex flex-wrap justify-evenly p-4 max-sm:p-0">
+      <div className="w-full lg:w-auto">
+        <div className="flex flex-wrap lg:flex-nowrap gap-x-10 justify-between">
           {article.cover_image !== null && (
             <Image
               src={article.cover_image}
               width={500}
               height={500}
               unoptimized
+              style={{ objectFit: "cover" }}
               alt={article.title}
-              className="max-lg:w-full bg-gray-500 h-96 max-sm:w-11/12 max-sm:rounded-lg max-sm:h-52 w-8/12 rounded-xl"
+              className="w-full lg:w-8/12 h-96 max-sm:w-full max-sm:rounded-lg max-sm:h-52 rounded-xl bg-gray-500"
             />
           )}
-          <div>
+          <div className="w-full lg:w-auto mt-5 lg:mt-0">
             <h1
-              className={`${blogTitle.className} max-sm:text-[25px] max-sm:w-72 text-3xl font-semibold my-5`}
+              className={`${blogTitle.className} text-3xl max-sm:text-[25px] font-semibold my-5`}
             >
               {article.title}
             </h1>
@@ -64,7 +65,7 @@ async function BlogDetail({ params }: { params: { id: string } }) {
                   return (
                     <span
                       key={tag}
-                      className={`${blogTag.className} h-7 w-[auto] rounded-md px-3 py-1 text-xs `}
+                      className={`${blogTag.className} h-7 rounded-md px-3 py-1 text-xs`}
                       style={{
                         border: "1px solid #656C7D",
                         color: "#656C7D",
@@ -86,14 +87,12 @@ async function BlogDetail({ params }: { params: { id: string } }) {
                 className="rounded-full"
               />
               <span
-                className={`${userProfileName.className} max-sm:text-[13px] max-xl:text-lg  text-gray-400`}
+                className={`${userProfileName.className} text-lg max-sm:text-[13px] text-gray-400`}
               >
                 {article.user.name}
               </span>
             </div>
-            <p
-              className={`${blogDescription.className} my-10 text-gray-300 max-sm:w-96`}
-            >
+            <p className={`${blogDescription.className} my-10 text-gray-300`}>
               {article.description}
             </p>
           </div>
@@ -102,7 +101,7 @@ async function BlogDetail({ params }: { params: { id: string } }) {
         {article.body_html && (
           <div
             dangerouslySetInnerHTML={{ __html: article.body_html }}
-            className={`${blogDescription.className} my-10 text-gray-300 max-sm:w-11/12`}
+            className={`${blogDescription.className} my-10 text-gray-300 w-full max-sm:w-11/12`}
           ></div>
         )}
       </div>
