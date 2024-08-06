@@ -59,7 +59,7 @@ async function Card({ query }: { query?: string }) {
                   height={40}
                   unoptimized
                   alt={article.user.name}
-                  className={` h-10 w-10 bg-gray-400 rounded-full my-5 max-sm:my-2`}
+                  className={` h-10 w-10 bg-gray-400 rounded-full`}
                 />
                 <span className={`${userProfileName.className}`}>
                   {article.user.name}
