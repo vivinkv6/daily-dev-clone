@@ -19,13 +19,13 @@ export default function Home({
       <div className="flex flex-col">
         <div className="w-[100%] p-16 max-sm:p-3 flex flex-row justify-between">
           <div className="flex gap-2  items-center bg-[#1A1F26] rounded-md px-2 py-2">
-            <Image src={filter} width={30} height={30} alt="Filter Icon" />
+            <Image src={filter} width={30} height={30} alt="Filter Icon" unoptimized />
             <span className="font-semibold text-[#A3AEC9] text-sm">
               Feed Settings
             </span>
           </div>
           <div className="flex gap-2 items-center">
-            <Image src={plus} width={30} height={30} alt="Plus Icon" />
+            <Image src={plus} width={30} height={30} alt="Plus Icon" unoptimized />
             <span className="font-semibold text-[#A3AEC9] text-sm">
               Add Shortcuts
             </span>

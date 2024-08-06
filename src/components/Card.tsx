@@ -27,7 +27,7 @@ async function Card({ query }: { query?: string }) {
     return (
       <div className="h-[50dvh] flex justify-center max-sm:items-center">
         <div className="flex flex-col items-center">
-          <Image src={Icon} height={1000} width={1000} alt="icon" />
+          <Image src={Icon} height={1000} width={1000} unoptimized alt="icon" />
           <h1
             className={`${ResultNotFound.className} max-sm:text-3xl text-5xl`}
           >
@@ -58,6 +58,7 @@ async function Card({ query }: { query?: string }) {
                   width={40}
                   height={40}
                   alt={article.user.name}
+                  unoptimized
                   className={` h-10 w-10 bg-gray-400 rounded-full my-5 max-sm:my-2`}
                 />
                 <span className={`${userProfileName.className}`}>
@@ -102,6 +103,7 @@ async function Card({ query }: { query?: string }) {
                   width={600}
                   height={400}
                   alt={article?.title}
+                  unoptimized
                   className="h-48 w-full rounded-lg bg-gray-400 my-5"
                 />
               ) : (

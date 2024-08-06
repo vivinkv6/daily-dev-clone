@@ -38,6 +38,7 @@ function Error({ error, reset }: ErrorProp) {
           src={errorList[0].url}
           width={500}
           height={500}
+          unoptimized
           alt={errorList[0].status.toString()}
         />
       </div>

@@ -47,10 +47,11 @@ function Navbar() {
           src={logo}
           height={30}
           width={30}
+          unoptimized
           alt="Logo"
           className="max-sm:hidden"
         />
-        <Image src={name} height={40} width={80} alt="Daily. Dev" />
+        <Image src={name} height={40} unoptimized width={80} alt="Daily. Dev" />
       </Link>
       <div>
         <form
@@ -58,7 +59,7 @@ function Navbar() {
           method="post"
           className="w-96 h-12 max-sm:hidden bg-[#1c1f26] rounded-xl flex justify-between items-center p-2"
         >
-          <Image src={searchIcon} height={30} width={30} alt="Search icon" />
+          <Image src={searchIcon} height={30} unoptimized width={30} alt="Search icon" />
           <input
             type="text"
             name="query"
@@ -100,6 +101,7 @@ function Navbar() {
             src={searchIcon}
             height={40}
             width={40}
+            unoptimized
             alt="Search icon"
             onClick={() => setIsMobileSearchVisible(!isMobileSearchVisible)}
           />

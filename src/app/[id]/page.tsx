@@ -47,6 +47,7 @@ async function BlogDetail({ params }: { params: { id: string } }) {
               src={article.cover_image}
               width={500}
               height={500}
+              unoptimized
               alt={article.title}
               className="max-lg:w-full bg-gray-500 h-96 max-sm:w-11/12 max-sm:rounded-lg max-sm:h-52 w-8/12 rounded-xl"
             />
@@ -80,6 +81,7 @@ async function BlogDetail({ params }: { params: { id: string } }) {
                 src={article.user.profile_image_90}
                 width={50}
                 height={50}
+                unoptimized
                 alt={article.title}
                 className="rounded-full"
               />
