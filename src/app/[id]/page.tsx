@@ -2,7 +2,7 @@ import { fetchData } from "@/_lib/fetchData";
 import { Article } from "@/_lib/type";
 import Image from "next/image";
 import React from "react";
-import { Metadata } from "next";
+import { Metadata } from "next/types";
 import {
   blogDescription,
   blogTag,

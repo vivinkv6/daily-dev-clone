@@ -45,7 +45,7 @@ async function Card({ query }: { query?: string }) {
           return (
             <Link
               href={`/${article.id}`}
-              className="h-[auto] w-96 max-sm:w-[21rem] rounded-xl bg-[#1A1F26] p-3"
+              className="h-[auto] w-96 flex flex-col justify-between items-start max-sm:w-[21rem] rounded-xl bg-[#1A1F26] p-3"
               key={article.id}
               title={article.title}
             >
@@ -65,6 +65,7 @@ async function Card({ query }: { query?: string }) {
                   {article.user.name}
                 </span>
               </div>
+             
               <h1 className={`${blogTitle.className}  text-xl my-5 max-sm:my-3`}>
                 {article.title}
               </h1>
@@ -95,7 +96,9 @@ async function Card({ query }: { query?: string }) {
                   {article.description}
                 </span>
               )}
+            
               <br />
+              <div className="w-full">
               <span className="text-xs text-gray-300 font-normal">Today</span>
               {article?.cover_image !== null ? (
                 <Image
@@ -109,6 +112,7 @@ async function Card({ query }: { query?: string }) {
               ) : (
                 <div className="h-48 w-full rounded-lg bg-gray-700 my-5 animate-pulse"></div>
               )}
+              </div>
             </Link>
           );
         })}
